@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #000; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+  
+
+.chat-container {
+    width: 100%; /* Ancho completo en dispositivos móviles */
+    max-width: 600px; /* Ancho máximo para pantallas más grandes */
+    margin: 20px; /* Un poco de margen en todos los lados */
+    border: 1px solid #444; /* Borde oscuro */
+    border-radius: 15px;
+    background-color: #333; /* Fondo de contenedor oscuro */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra clara para contraste */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222; /* Fondo oscuro para el encabezado */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'League Spartan', sans-serif;
+    
+    
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #111; /* Fondo muy oscuro para los mensajes */
+    color: #ccc; /* Texto gris claro */
+}
+
+.chat-form {
+    padding: 10px;
+    background-color: #222; /* Fondo oscuro para el formulario */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+textarea {
+    width: calc(100% - 90px);
+    resize: none;
+    background-color: #333; /* Fondo oscuro para el área de texto */
+    color: #fff; /* Texto claro */
+    border: 1px solid #444; /* Borde oscuro */
+}
+
+.btn-send, .btn-clear {
+    background-color: #444; /* Fondo oscuro para botones */
+    color: #fff; /* Texto claro */
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-clear:hover, .btn-send:hover {
+    background-color: #555; /* Fondo más claro al pasar el ratón */
+}
+
+/* Estilos base para todas las burbujas de mensajes */
+.message-bubble {
+    max-width: 80%; /* Controla el ancho máximo de la burbuja */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 18px; /* Da forma redondeada a las burbujas */
+    display: block;
+    clear: both;
+}
+
+/* Estilos específicos para mensajes del usuario */
+.message-bubble.user {
+    background-color: #1b1b1b; /* Fondo oscuro para los mensajes del usuario */
+    color: #ddd;  /* Color de fondo para los mensajes del usuario */
+    margin-left: 20%; /* Alinea los mensajes del usuario a la derecha */
+    margin-right: 4%;
+    text-align: left;
+    float: right;
+}
+
+/* Estilos específicos para respuestas del asistente */
+.message-bubble.assistant {
+    background-color: #3B3B6D; /* Gris azulado oscuro, evocando profundidad e inteligencia */
+    color: #F5F5DC; /* Blanco cremoso, para un contraste suave y legible */
+    margin-right: 20%; /* O ajusta según el espacio deseado del borde derecho */
+    margin-left: 4%; /* Espacio pequeño del borde izquierdo */
+    text-align: left; /* Texto alineado a la izquierda dentro de la burbuja */
+    float: left; /* Flota a la izquierda dentro del contenedor */
+}
+/* Asegúrate de añadir estos estilos a tus mensajes en la función renderConversationHistory */
+
+/* Estilo para el mensaje "escribiendo..." */
+.writing {
+    color: #999; /* Un gris más claro para el texto */
+    font-style: italic; /* Opcional: para diferenciar aún más el mensaje "escribiendo..." */
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Esto centrará el contenido */
+    position: relative; /* Esto permite posicionar absolutamente el logo dentro */
+    padding-left: 10px;
+    gap: 20px; /* Espacio entre el logo y el título, si es necesario */
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.logo {
+    position: absolute; /* Posiciona el logo de forma absoluta */
+    left: 0; /* Alinea el logo a la izquierda */
+    width: 300px; /* Tamaño del logo */
+    height: auto;
+    margin-left: 20px; /* Espacio desde el borde izquierdo */
+}
+
+.text-between {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #fff; /* Texto claro */
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+
+
+/* Ajustes adicionales para el tema nocturno que quieras añadir */

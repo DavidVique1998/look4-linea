@@ -1,0 +1,9 @@
+# Ignore Python byte-compiled files
+*.pyc
+
+# Ignore Python cache directories
+__pycache__/
+.vercel
+.env
+*.env
+*env

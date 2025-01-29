@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "transistor.py",
+        "use": "@vercel/python",
+        "config": {
+          "pythonVersion": "3.12"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "transistor.py"
+      }
+    ]
+  }
+  
